@@ -1,0 +1,65 @@
+Program: java Main 1 2 +
+Output: 3
+
+Program: java Main 4 5 6 7 3 / "*" -2 "*" 1 -
+Output: -25
+
+Program: java Main 10 dup dup "*" "*" "*"
+Output: 1000
+
+Program: java Main 1 23 swap -
+Output: 22
+
+Program: java Main 1 2 "*" dup 100 "<" -9 swap if jump drop
+Output: 128
+
+Program: java Main dup + if jump "*" 3 / "<"
+Output: 3
+
+Program: java Main 2 3 + 4 "*" 5 / 6 -
+Output: -2
+
+Program: java Main -12 dup drop + + + dup "*"
+Output: 144
+
+Program: java Main "*" dup 10 / -20 300 rot / +
+Output: 10
+
+Program: java Main 0 123 4567 swap
+Output: 123
+
+Program: java Main 2 3 "*" 12 2 / =
+Output: 1
+
+Program: java Main 6 7 ">"
+Output: 0
+
+Program: java Main 6 7 "<"
+Output: 1
+
+Program: java Main 1 2 if drop 3 +
+Output: 3
+
+Program: java Main 1 0 if drop 3 +
+Output: 4
+
+Program: java Main 1 1 + dup 20 ">" if -8 jump
+Output: (nothing)
+
+Program: java Main 88 1 1 + dup 20 ">" if -8 jump
+Output: 88
+
+Program: java Main 9 8 7 6 -100 0 if -1 2 jump 222 333 dup "*"
+Output: 10000
+
+Program: java Main 1 2 3 4 5 6 7 8 yank +
+Output: 9
+
+Program: java Main 3 10 23 42 shove drop drop +
+Output: 45
+
+Program 1: java Main 1 dup dup 1 + dup 100000 "<" -10 swap if jump drop 100 ">" -7 swap if jump drop
+Output: 99
+
+Program 2: java Main 1 dup dup 1 + dup 5 shove yank drop 100000 "<" -15 swap if jump drop 100 ">" -7 swap if jump drop
+Output: 99
