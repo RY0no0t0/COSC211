@@ -1,12 +1,12 @@
 class List {
-    private Node first;
+    private AnchorNode first;
     private Node last;
     private int count;
 
     public List() {
         // COLLABORATIVE ASSIGNMENT: IMPLEMENT THIS
         count = 0;
-        first = new Node("ANCHOR");
+        first = new AnchorNode();
         last = first;
     }
 
@@ -27,7 +27,7 @@ class List {
     public Node find(String toFind) {
         // COLLABORATIVE ASSIGNMENT: IMPLEMENT THIS
         Node current = first.next;
-        while (current.next != null) {
+        while (current != null) {
             if (current.value.equals("toFind")) {
                 return current;
             } else {

@@ -8,3 +8,10 @@ class Node {
         previous = null;
     }
 }
+
+class AnchorNode extends Node {
+
+    public AnchorNode () {
+        super("THIS_IS_ANCHOR");
+    }
+}
