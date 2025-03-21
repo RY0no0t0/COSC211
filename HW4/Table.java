@@ -37,14 +37,35 @@ class Table {
 
     public boolean find(String s) {
         // COLLABORATIVE ASSIGNMENT: IMPLEMENT THIS
-        
+        int i = 0;
+        while (i < size) {
+            if (table[i].find(s)!=null) {
+                return true;
+            }
+            i++;
+        }
+        return false;
     }
 
     public void remove(String s) {
         // COLLABORATIVE ASSIGNMENT: IMPLEMENT THIS
+        int i = 0;
+        while (i < size) {
+            table[i].remove(s);
+            i++;
+        }
     }
 
     public int maxInSlot() {
         // COLLABORATIVE ASSIGNMENT: IMPLEMENT THIS
+        int maxnum = 0;
+        int i = 0;
+        while (i<size) {
+            if (table[i].size() > maxnum) {
+                maxnum = table[i].size();
+            }
+            i++;
+        }
+        return maxnum;
     }
 }
