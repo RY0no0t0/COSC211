@@ -17,7 +17,7 @@ class List {
 
     public void add(String toAdd) {
         // COLLABORATIVE ASSIGNMENT: IMPLEMENT THIS
-        Node Adding = new Node("toAdd");
+        Node Adding = new Node(toAdd);
         last.next = Adding;
         Adding.previous = last;
         last = Adding;
@@ -28,7 +28,8 @@ class List {
         // COLLABORATIVE ASSIGNMENT: IMPLEMENT THIS
         Node current = first.next;
         while (current != null) {
-            if (current.value.equals("toFind")) {
+            // System.out.println(current.value);
+            if (current.value.equals(toFind)) {
                 return current;
             } else {
                 current = current.next;

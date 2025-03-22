@@ -18,7 +18,8 @@ class Table {
 
     private int hash2(String s) {
         // INDIVIDUAL ASSIGNMENT: IMPLEMENT THIS
-        return 0; // for testing the rest during collaboration
+        return Integer.parseInt(s) % 100;
+        // return 0; // for testing the rest during collaboration
     }
 
     private int hash(String s) {
