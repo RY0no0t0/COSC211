@@ -13,12 +13,26 @@ class Table {
 
     private int hash1(String s) {
         // INDIVIDUAL ASSIGNMENT: IMPLEMENT THIS
-        return 0; // for testing the rest during collaboration
+        int i = 0;
+        for (int j = 0; j < s.length(); j++) {
+            if (s.charAt(j) != 'e'){
+                i += (s.charAt(j))*(j+1)*(j+1);
+            }
+        }
+        //System.out.println(i+" "+i%100);
+        return i % 100;
+        // return 0; // for testing the rest during collaboration
     }
 
     private int hash2(String s) {
         // INDIVIDUAL ASSIGNMENT: IMPLEMENT THIS
-        return Integer.parseInt(s) % 100;
+        float i = 0;
+        for (int j = 0; j < s.length(); j++) {
+            i += (s.charAt(j)-48)*j*j;
+            //System.out.println("oh "+i);
+        }
+        //System.out.println(i+" "+i%100);
+        return ((int)i/s.length())%100;
         // return 0; // for testing the rest during collaboration
     }
 

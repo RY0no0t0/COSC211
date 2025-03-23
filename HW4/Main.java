@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) throws java.io.IOException {
         // First test the hash table functionality
-        tableTest();
+        // tableTest();
 
         // Then play HashAttack!
         String fileContents;
@@ -54,6 +54,7 @@ public class Main {
         int step;
         for (step = 0; step < width * height && step < attack.length; step++) {
             table.add(attack[step]);
+            // System.out.println(table.maxInSlot());
             if (table.maxInSlot() > height) {
                 break;
             }
