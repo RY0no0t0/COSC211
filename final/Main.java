@@ -17,8 +17,8 @@ public class Main {
         }
 
         // Making the data structures
-        Data d = new Graph(72);
-        //Data d = new Stack();
+        // Data d = new Graph(72);
+        Data d = new Stack();
 
         d.initialize(72);
 
