@@ -10,7 +10,7 @@ public class Graph implements Data{
         size = i;
     }
 
-    public void initialize () {
+    public void initialize (int k) {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 matrix[i][j] = new Node();

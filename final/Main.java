@@ -1,15 +1,26 @@
 public class Main {
     public static void main(String[] args) {
 
+        long StartTime = System.nanoTime();
+
+        if (args.length != 2) {
+            System.err.println("Please input only two parameters, tonality and resolutionality.");
+            System.exit(1);
+        }
         // Unpack the args
         double tparam = Double.parseDouble(args[0]);
         double rparam = Double.parseDouble(args[1]);
 
+        if (tparam > 1 || rparam > 1 || tparam < 0 || rparam < 0) {
+            System.err.println("Parameters must be between 0 and 1.");
+            System.exit(1);
+        }
+
         // Making the data structures
         Data d = new Graph(72);
-        //Data d = new heap()
+        //Data d = new Stack();
 
-        d.initialize();
+        d.initialize(72);
 
         // Pick the first number
         int first = (int)(Math.random()*72);
@@ -64,6 +75,7 @@ public class Main {
             }
         }
         System.out.println("]");
+        System.out.println("Runtime: " + (System.nanoTime() - StartTime));
     }
 
     public static void Tonality(double param, Data d, Queue store){
